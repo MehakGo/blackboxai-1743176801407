@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EONVERSE - The Next-Gen Entertainment Experience</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Howler.js for Audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loader Overlay -->
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">EONVERSE</div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Section 1: Explosive Landing Scene -->
+    <section id="landing" class="section">
+        <canvas id="landing-canvas"></canvas>
+        <div class="content">
+            <h1 class="main-title">EONVERSE</h1>
+            <p class="tagline">The Next-Gen Entertainment Experience</p>
+            <button class="cta-button">Enter EONVERSE</button>
+        </div>
+    </section>
+
+    <!-- Section 2: Story Journey -->
+    <section id="story" class="section">
+        <div class="story-container">
+            <h2>The Evolution of EONVERSE</h2>
+            <div class="story-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Vision</h3>
+                        <p>A revolutionary platform that transforms how we experience entertainment</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>Born from a desire to revolutionize digital entertainment</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Innovation</h3>
+                        <p>Pushing boundaries with cutting-edge technology and immersive experiences</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Evolution</h3>
+                        <p>Continuously adapting and growing to meet the future of entertainment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Core Features -->
+    <section id="features" class="section">
+        <canvas id="features-canvas"></canvas>
+        <div class="features-container">
+            <h2>Core Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h3>Immersive Experience</h3>
+                    <p>Step into a new dimension of entertainment with our cutting-edge immersive technology</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Smart Integration</h3>
+                    <p>Seamlessly connect and interact with content across multiple platforms</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced artificial intelligence that learns and adapts to your preferences</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Social Connection</h3>
+                    <p>Connect with friends and communities in revolutionary new ways</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Platform</h3>
+                    <p>State-of-the-art security ensuring your data and privacy are protected</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Future Ready</h3>
+                    <p>Built for the next generation of digital entertainment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Thrilling Suspense -->
+    <section id="suspense" class="section">
+        <div class="suspense-container">
+            <h2 class="glitch-text">Something Big is Coming</h2>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+            <p class="suspense-text">The Entertainment Industry is About to Change Forever</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Impact Scene -->
+    <section id="impact" class="section">
+        <div class="impact-container">
+            <h2>EONVERSE Impact</h2>
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Early Adopters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Partner Platforms</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Global Access</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Final CTA -->
+    <section id="cta" class="section">
+        <div class="cta-container">
+            <h2>Join the Revolution</h2>
+            <form id="waitlist-form" class="waitlist-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Join Waitlist</button>
+            </form>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom JS -->
+    <script src="js/audio.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
